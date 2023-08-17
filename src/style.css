@@ -1,7 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
+
+.to-do-list-container {
+  border: 3px solid lightgray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding: 10px; */
+  width: 90%;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid lightgray;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(108, 122, 137);
+}
+
+.check-box-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+}
+
+#text {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid black;
+  width: 100%;
+}
+
+#text:hover {
+  border: 3px solid rgba(227, 186, 143);;
+}
+
+#text::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: small;
+}
+
+#clear-all-button {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(237, 231, 225, 1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
