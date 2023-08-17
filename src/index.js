@@ -50,14 +50,8 @@ const taskFunc = taskArray.map((task) => {
 
   const verticalDotsIcon = document.createElement('i');
   verticalDotsIcon.setAttribute('class', 'fa-solid fa-ellipsis-vertical');
-  // verticalDotsImg.src = 'vdot.png';
   verticalDotsDiv.appendChild(verticalDotsIcon);
   return listItem;
 });
-
-// taskFunc.forEach((listItemContainer) => {
-//   listItemDisplayed.appendChild(listItemContainer);
-// });
-// console.log(taskFunc)
 
 window.addEventListener('DOMContentLoaded', taskFunc);
