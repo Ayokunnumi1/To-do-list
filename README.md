@@ -48,8 +48,6 @@ This repository contains the source codes for a To Do List. It showcases my skil
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
