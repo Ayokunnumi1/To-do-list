@@ -1,71 +1,24 @@
+import './reset.css';
 import './style.css';
-// import templateMarkup from './markUp';
 
-const listItemDisplayed = document.querySelector('.list-item-displayed');
-const text = document.querySelector('#text');
-const formContainer = document.querySelector('#form-container');
-const verticalDotsDiv = document.querySelector('.fa-solid fa-ellipsis-vertical');
+import TodoItems from './TodoItems.js';
+import grabinput from './GrabUserInput.js';
+import displayTodos from './DisplayTodos.js';
 
-// function getFromLocalStorage() {
-//   const toDoArray = localStorage.getItem('todoArray');
-//   if (getToDoData) {
-//     return JSON.parse(getToDoData);
-//   }
-//   return [];
-// }
-
-let toDoArray;
+let todos;
 if (localStorage.length !== 0) {
-  const b = JSON.parse(localStorage.getItem('todoArray'));
-  toDoArray = b;
+  const b = JSON.parse(localStorage.getItem('todos'));
+  todos = new TodoItems(b);
 } else {
-  toDoArray = [];
-  localStorage.setItem('todoArray', JSON.stringify(toDoArray));
+  todos = new TodoItems([]);
+  localStorage.setItem('todos', JSON.stringify(todos.todoitems));
 }
 
-// const toDoArray = getFromLocalStorage();
-// let currentIndex = 0;
+const addtodoarrow = document.querySelector('.addtodoarrow');
+addtodoarrow.addEventListener('click', grabinput.grab);
 
-function setToLocalStorage() {
-  localStorage.setItem('todoArray', JSON.stringify(toDoArray));
-}
+const deleteAll = document.querySelector('.clear-link');
 
-function getUserInput() {
-  const textInput = text.value.trim();
-  if (textInput) {
-    const userInput = {
-      description: textInput,
-      completed: false,
-    };
-    toDoArray.push(userInput);
-    // eslint-disable-next-line no-plusplus
-    // currentIndex++;
-  }
-  text.value = '';
-}
+deleteAll.onclick = grabinput.clearAllCompleted;
 
-function displayToDoList() {
-  // listItemDisplayed.innerHTML = '';
-  let markup = '';
-  toDoArray.forEach((todo) => {
-    const elemenT = templateMarkup(todo);
-    markup += elemenT;
-  });
-  listItemDisplayed.innerHTML = markup;
-  // const element = toDoArray.forEach((toDo) => {
-  //   const li = templateMarkup(toDo);
-  //   return li;
-  // });
-
-  // listItemDisplayed.insertAdjacentHTML('beforeend', element.join(''));
-  // listItemDisplayed.innerHTML = element;
-}
-
-formContainer.addEventListener('submit', (event) => {
-  event.preventDefault();
-  getUserInput();
-  setToLocalStorage();
-  displayToDoList();
-});
-
-// window.addEventListener('DOMContentLoaded', displayToDoList);
+displayTodos.display();
