@@ -10,10 +10,21 @@
 
 <body>
     <section class="to-do-list-container">
-        <h1>Today's To Do</h1>
-        <div><input type="text" id="text" placeholder="Add to your list"></div>
-        <!-- <img src="/images/friends.png" alt=""> -->
-        <ul class="list-item-displayed"></ul>
+        <h3>Today's To Do</h3>
+        <form action="" id="form-container">
+            <input type="text" id="text" placeholder="Add to your list" required>
+        </form>
+        <ul class="list-item-displayed">
+            <!-- <li class="list-item-container">
+                <div class="list-item">
+                    <input type="checkBox" name="checkBox" value="checkBox">
+                    <p class="check-box-text"></p>
+                </div>
+                <div class="vertical-dots-div">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </li> -->
+        </ul>
         <div><button type="submit" id="clear-all-button">Clear All Completed</button></div>
     </section>
 </body>
