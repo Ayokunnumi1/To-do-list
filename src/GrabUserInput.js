@@ -18,9 +18,6 @@ class GrabUserInput {
 
   remove = (val) => {
     val.preventDefault();
-    if (!val.target.parentElement.children[0].checked) {
-      return;
-    }
     const todosArr = JSON.parse(localStorage.getItem('todos'));
     TodoItems.deletetodo(Number(val.target.parentElement.children[1].id), todosArr);
   }
