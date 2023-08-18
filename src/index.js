@@ -1,5 +1,5 @@
 import './style.css';
-import templateMarkup from './markUp';
+// import templateMarkup from './markUp';
 
 const listItemDisplayed = document.querySelector('.list-item-displayed');
 const text = document.querySelector('#text');

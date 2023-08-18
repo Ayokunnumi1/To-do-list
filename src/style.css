@@ -1,88 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+/*** Project Meta ***/
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+/* general - line 13 */
+
+/* header - line 39 */
+
+/* main content - line 19 */
+
+/* footer - line 144 */
+
+/** GENERAL **/
+
+:root {
+  --border-bottom: 1px solid rgb(230, 230, 230);
+  --grey: rgb(246, 246, 246);
+  --flex: flex;
+}
+
+/* Mobile View */
+
+.html {
+  font-size: 87.5%;
+  scroll-behavior: smooth;
+}
+
+.body {
+  position: relative;
+}
+
+.offscreen {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
   padding: 0;
-  list-style: none;
+  position: absolute;
+  width: 1px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/** header **/
+
+/* Main Content */
+
+.space1 {
+  border-bottom: var(--border-bottom);
+  padding: 1rem;
+  display: var(--flex);
   align-items: center;
-  height: 100vh;
 }
 
-.to-do-list-container {
-  border: 3px solid lightgray;
-  /* position: absolute;
-  border: 3px solid red;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-
-  /* padding: 10px; */
-  width: 90%;
+.space {
+  border-bottom: var(--border-bottom);
+  padding: 1rem;
+  display: var(--flex);
+  align-items: center;
+  position: relative;
 }
 
-.list-item-container {
-  display: flex;
-  flex-direction: row;
+.form {
+  display: var(--flex);
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-bottom: 2px solid lightgray;
 }
 
-.list-item {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+.todoinput {
+  width: 80%;
 }
 
-h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  color: rgba(108, 122, 137);
+.addtodoarrow {
+  width: 15px;
+  margin-right: 0.6rem;
 }
 
-.check-box-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: large;
+.threedots {
+  width: 1.3rem;
+  display: block;
+  position: absolute;
+  right: 1rem;
 }
 
-#text {
-  padding: 10px;
-  border-radius: 5px;
+.bin {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  z-index: 100;
+}
+
+.bin:hover {
+  display: block;
+  cursor: pointer;
+}
+
+.todo {
+  background-color: var(--grey);
+  height: 100vh;
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  background-color: white;
+  max-width: 500px;
+  width: 80%;
+  box-shadow: 0 0 10px rgb(208, 207, 208);
+}
+
+.demo {
+  font-weight: bold;
+}
+
+.todoinput:focus {
   outline: none;
-  border: 2px solid black;
-  width: 100%;
+  background-color: initial;
 }
 
-#text:hover {
-  border: 3px solid rgba(227, 186, 143);
-}
-
-#text::placeholder {
-  font-family: 'Poppins', sans-serif;
+.todoinput::placeholder {
   font-style: italic;
-  font-size: small;
 }
 
-#clear-all-button {
-  padding: 10px;
-  width: 100%;
+.input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: none;
+  outline: none;
+}
+
+.list-title {
+  width: 87%;
+  margin: 0 0.8rem;
+}
+
+.list-title:focus {
+  outline: none;
+
+  /* background-color: palegoldenrod; */
+
+  /* margin: 0 0.8rem; */
+}
+
+.clear {
   text-align: center;
-  background-color: rgba(237, 231, 225, 1);
-  border-radius: 5px;
+  padding: 1.1rem;
+  background-color: var(--grey);
+}
+
+.clear-link {
+  color: grey;
+}
+
+.clear-link:hover {
+  text-decoration: underline;
+  color: black;
   cursor: pointer;
 }
 
-.vertical-dots-div {
-  cursor: pointer;
+.clear-link:visited {
+  color: initial;
 }
+
+/* Footer */
