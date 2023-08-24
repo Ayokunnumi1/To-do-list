@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import todomarkup from '../TodoMarkup';
-import TodoItems from '../TodoItems';
+import todomarkup from './TodoMarkup.js';
+import TodoItems from './TodoItems.js';
 
 let store = [{
   description: 'laundry',
@@ -41,5 +41,51 @@ describe('add a new todoitem', () => {
       completed: false,
       index: 3,
     }, store)).toBeTruthy();
+  });
+});
+
+// remove
+describe('remove a new todoitem', () => {
+  beforeEach(() => {
+    store = [];
+    store = [
+      { description: 'play', completed: false, index: 1 },
+      { description: 'work', completed: false, index: 2 },
+      { description: 'study', completed: false, index: 3 },
+    ];
+    const todoList = document.querySelector('.list-items');
+    let markup = '';
+    store.forEach((todo) => {
+      markup += todomarkup(todo);
+    });
+    todoList.innerHTML = markup;
+  });
+
+  it('removes a new object to the store', () => {
+    const size = store.length;
+    store = TodoItems.deletetodo(2, store);
+    expect(store.length).toEqual(size - 1);
+  });
+
+  it('item removed from the list', () => {
+    const todoList = document.querySelector('.list-items');
+
+    let markup = '';
+    store.forEach((todo) => {
+      markup += todomarkup(todo);
+    });
+    todoList.innerHTML = markup;
+    const size2 = document.querySelectorAll('.space').length;
+
+    store = TodoItems.deletetodo(2, store);
+
+    markup = '';
+    store.forEach((todo) => {
+      markup += todomarkup(todo);
+    });
+    todoList.innerHTML = markup;
+    const size = document.querySelectorAll('.space').length;
+
+    expect(size).toEqual(size2 - 1);
   });
 });
