@@ -1,5 +1,4 @@
 import todomarkup from './TodoMarkup.js';
-// C:\Users\USER\Documents\To-do-list\src\TodoMarkup.js
 import grabinput from './GrabUserInput.js';
 
 class DisplayTodos {
