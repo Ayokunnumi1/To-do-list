@@ -1,9 +1,9 @@
 import './reset.css';
 import './style.css';
 
-import TodoItems from './TodoItems.js';
-import grabinput from './GrabUserInput.js';
-import displayTodos from './DisplayTodos.js';
+import TodoItems from './modules/TodoItems.js';
+import grabinput from './modules/GrabUserInput.js';
+import displayTodos from './modules/DisplayTodos.js';
 
 let todos;
 if (localStorage.length !== 0) {
