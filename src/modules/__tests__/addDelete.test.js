@@ -1,11 +1,27 @@
 /**
- * @jest-environment jsdom
+ * @jest-environment-jsdom
  */
+import { JSDOM } from 'jsdom';
 
 import todomarkup from '../TodoMarkup.js';
-import TodoItems from '../TodoItems.js';
+import TodoItems from '../TodoItems.js'; // Import JSDOM from the 'jsdom' package
 
-let store = [{
+// Set up a basic HTML document in JSDOM
+const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+global.document = dom.window.document;
+
+// Create a mock implementation of localStorage
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+
+// Mock the global localStorage object with the mock implementation
+global.localStorage = localStorageMock;
+
+const store = [{
   description: 'laundry',
   completed: false,
   index: 1,
