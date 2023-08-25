@@ -101,3 +101,22 @@ describe('remove a new todoitem', () => {
     expect(store[sampleStorageIndex - 1].completed).toBe(true);
   });
 });
+
+// clearall
+describe('clears all completed activities', () => {
+  it('removes a new object from the store', () => {
+    expect(TodoItems.clearAll(store)).not.toBe(store);
+  });
+
+  it('removes a todolist item from the DOM', () => {
+    const newStore = TodoItems.clearAll(store);
+    const todoList = document.querySelector('.list-items');
+    let markup = '';
+    newStore.forEach((todo) => {
+      markup += todomarkup(todo);
+    });
+    todoList.innerHTML = markup;
+    const inputs = document.querySelectorAll('.list-title');
+    expect(inputs.length).toEqual(store.length - 1);
+  });
+});
