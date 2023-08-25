@@ -21,7 +21,7 @@ const localStorageMock = {
 // Mock the global localStorage object with the mock implementation
 global.localStorage = localStorageMock;
 
-const store = [{
+let store = [{
   description: 'laundry',
   completed: false,
   index: 1,
