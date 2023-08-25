@@ -53,6 +53,8 @@ This repository contains the source codes for a To Do List. It showcases my skil
 - **Add New:A clickable link that displays a form allowing users to input the title and author of books**
 - **Social Contact: A form allowing visitors to get in touch with me.**
 - **Responsive Design: The website is optimized for different devices and screen sizes.**
+- **We used jest as the test framework.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
