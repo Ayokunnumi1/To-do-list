@@ -5,7 +5,7 @@
 
 ## Testing with jest Screenshot
 
-<img src="./images/Screenshot 2023-08-25 at 15.28.28.png">
+<img src="./images/Screenshot 2023-08-25 at 15.27.47.png">
 
 # 📗 Table of Contents
 
