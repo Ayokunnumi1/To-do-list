@@ -1,4 +1,11 @@
 # To-do-list
+## Screenshot
+
+<img src="./images/Screenshot 2023-08-25 at 15.28.28.png">
+
+## Testing with jest Screenshot
+
+<img src="./images/Screenshot 2023-08-25 at 15.28.28.png">
 
 # 📗 Table of Contents
 
@@ -100,6 +107,12 @@ Run this command;
 - GitHub: [@Ayokunnumi1][https://github.com/Ayokunnumi1]
 - Twitter: [@Ayokunnumi1] [https://twitter.com/AyokunnumiA]
 - LinkedIn: [Ayokunnumi] [https://www.linkedin.com/in/ayokunnumiomololu]
+
+👤 **Austin Obimbo**
+
+- GitHub: [@Obimbo07](https://github.com/Obimbo07)
+- Twitter: [@Austine](https://twitter.com/austsine)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/austin-obimbo-9a613623a/)
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
