@@ -41,6 +41,7 @@ This repository contains the source codes for a To Do List. It showcases my skil
     <li><a href="https://html.com/">HTML</a></li>
     <li><a href="https://www.css3.com/">CSS</a></li>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
+     <li><a href="https://www.jest.io/">Jest</a></li>
 
   </ul>
 </details>
