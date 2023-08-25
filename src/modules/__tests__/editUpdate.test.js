@@ -38,3 +38,33 @@ const store = [
 ];
 
 document.body.innerHTML = '<div class=\'list-items\'></div>';
+
+// edit
+describe('edits an item\'s description', () => {
+  it('edits an item\'s description', () => {
+    const newdescription = 'play football';
+    TodoItems.edit(newdescription, store[1].index, store);
+    expect(store[1].description).toBe(newdescription);
+  });
+
+  it('checking that new description is not empty', () => {
+    const olddescription = store[1].description;
+    let newdescription = '';
+    if (newdescription === '') newdescription = olddescription;
+    TodoItems.edit(newdescription, store[1].index, store);
+    expect(newdescription).toBe(olddescription);
+  });
+
+  it('checks if the description is updated in the DOM', () => {
+    const newdescription = 'read a book';
+    TodoItems.edit(newdescription, store[1].index, store);
+    const todoList = document.querySelector('.list-items');
+    let markup = '';
+    store.forEach((todo) => {
+      markup += todomarkup(todo);
+    });
+    todoList.innerHTML = markup;
+    const inputs = document.querySelectorAll('.list-title');
+    expect(inputs[1].value).toEqual(newdescription);
+  });
+});
