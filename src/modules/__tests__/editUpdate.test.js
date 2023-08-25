@@ -68,3 +68,36 @@ describe('edits an item\'s description', () => {
     expect(inputs[1].value).toEqual(newdescription);
   });
 });
+
+// update
+describe('remove a new todoitem', () => {
+  it('check if the input type checkbox is updated', () => {
+    const checkboxes = document.querySelectorAll('.input[type="checkbox"]');
+    checkboxes[1].checked = true;
+    expect(checkboxes[1].checked).toBe(true);
+  });
+
+  it('check if complete status is updated in the mock store', () => {
+    const checkboxes = document.querySelectorAll('.input[type="checkbox"]');
+    const sampleStorageIndex = 1;
+    checkboxes[sampleStorageIndex].checked = !checkboxes[sampleStorageIndex].checked;
+    // user has checked a todo task
+    checkboxes[sampleStorageIndex].checked = !checkboxes[sampleStorageIndex].checked;
+
+    if (checkboxes[sampleStorageIndex].checked === true) {
+      for (let i = 0; i < store.length; i += 1) {
+        if (store[i].index === sampleStorageIndex) {
+          store[i].completed = true;
+        }
+      }
+    } else {
+      for (let i = 0; i < store.length; i += 1) {
+        if (store[i].index === sampleStorageIndex) {
+          store[i].completed = false;
+        }
+      }
+    }
+
+    expect(store[sampleStorageIndex - 1].completed).toBe(true);
+  });
+});
