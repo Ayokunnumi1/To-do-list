@@ -6,11 +6,12 @@ const todoinput = document.querySelector('.todoinput');
 class GrabUserInput {
   grab = (val) => {
     val.preventDefault();
-    if (todoinput.value === '') {
+    if (todoinput.value.trim() === '') {
       return;
     }
+
     const idx = JSON.parse(localStorage.getItem('todos')).length + 1;
-    const todo = new Todo(todoinput.value, idx);
+    const todo = new Todo(todoinput.value.trim(), idx);
     const todosArr = JSON.parse(localStorage.getItem('todos'));
     TodoItems.addtodo(todo, todosArr);
     todoinput.value = '';

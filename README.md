@@ -1,4 +1,11 @@
 # To-do-list
+## Screenshot
+
+<img src="./images/Screenshot 2023-08-25 at 15.28.28.png">
+
+## Testing with jest Screenshot
+
+<img src="./images/Screenshot 2023-08-25 at 15.27.47.png">
 
 # 📗 Table of Contents
 
@@ -34,6 +41,7 @@ This repository contains the source codes for a To Do List. It showcases my skil
     <li><a href="https://html.com/">HTML</a></li>
     <li><a href="https://www.css3.com/">CSS</a></li>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
+     <li><a href="https://www.jest.io/">Jest</a></li>
 
   </ul>
 </details>
@@ -45,6 +53,8 @@ This repository contains the source codes for a To Do List. It showcases my skil
 - **Add New:A clickable link that displays a form allowing users to input the title and author of books**
 - **Social Contact: A form allowing visitors to get in touch with me.**
 - **Responsive Design: The website is optimized for different devices and screen sizes.**
+- **We used jest as the test framework.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,6 +110,12 @@ Run this command;
 - GitHub: [@Ayokunnumi1][https://github.com/Ayokunnumi1]
 - Twitter: [@Ayokunnumi1] [https://twitter.com/AyokunnumiA]
 - LinkedIn: [Ayokunnumi] [https://www.linkedin.com/in/ayokunnumiomololu]
+
+👤 **Austin Obimbo**
+
+- GitHub: [@Obimbo07](https://github.com/Obimbo07)
+- Twitter: [@Austine](https://twitter.com/austsine)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/austin-obimbo-9a613623a/)
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
